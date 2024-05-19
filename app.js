@@ -20,7 +20,5 @@ mongoose.connect(process.env.MONGODB_URI)
         await connectQueue();
         subscribeMessage();
         console.log(`Server running on port ${PORT}`);
-        
-        // console.log("Hello");
     }))
     .catch(err => console.error(err));
