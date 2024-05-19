@@ -2,10 +2,13 @@ const csv = require('csv-parser');
 // const csv = require('csvtojson');
 const fs = require('fs');
 const path = require('path');
+//Require models
 const UserList = require('../models/userList');
 const nodemailer = require('nodemailer');
 //Mailsender:
 const mailsender = require("../config/email-config");
+//Senddata:
+const { publishMessage } = require("../config/queue-config");
 
 const addUsersFromCSV = async (req, res) => {
     try {
@@ -93,26 +96,19 @@ const createList = async (req, res) => {
 const sendEmailToList = async (req, res) => {
     try {
         const listId = req.params.listId;
-        console.log("ListId", listId);
+        // console.log("ListId", listId);
         const { subject, body } = req.body;
         const list = await UserList.findById(listId);
-        console.log("List : ", list);
+        // console.log("List : ", list);
         if (!list) return res.status(404).json({ error: 'List not found' });
 
-        // const transporter = nodemailer.createTransport({
-        //     service: 'gmail',
-        //     auth: {
-        //         user: process.env.EMAIL_USER,
-        //         pass: process.env.EMAIL_PASS
-        //     }
-        // });
-        console.log("Hello");
+        // console.log("Hello");
         const emails = list.users.map(user => {
             let emailBody = body;
             for (const [key, value] of user.customProperties.entries()) {
                 emailBody = emailBody.replace(`[${key}]`, value);
             }
-            // console.log("Body : ", emailBody);
+            
             emailBody = emailBody.replace('[name]', user.name).replace('[email]', user.email);
             console.log("Body : ", emailBody);
             return {
@@ -122,8 +118,17 @@ const sendEmailToList = async (req, res) => {
                 text: emailBody
             };
         });
-
-        await Promise.all(emails.map(email => mailsender.sendMail(email)));
+        console.log("Emails : ", emails);
+        emails.map((email) => {
+            publishMessage({
+                from: email.from,
+                to: email.to,
+                subject: email.subject,
+                text: email.text
+            });
+        });
+        // console.log("Done");
+        // await Promise.all(emails.map(email => mailsender.sendMail(email)));
         res.status(200).json({ message: 'Emails sent successfully' });
     } catch (err) {
         res.status(500).json({ error: err.message });
