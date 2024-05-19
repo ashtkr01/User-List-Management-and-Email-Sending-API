@@ -39,7 +39,7 @@ I have completed this interesting assignmend given by MathonGo. Worked well on e
 - First clone the github repository
 
 ```bash
-  dummy url
+  git clone https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API.git
 ```
 - Open the repository folder in any code editor (VS code) or open any terminal.
 - Install dependencies
@@ -71,27 +71,38 @@ I have completed this interesting assignmend given by MathonGo. Worked well on e
 ```
 ## Screenshot
 - CreateList
-    - Initial Database 
+    - Initial Database
+      ![Initial-Database](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/4e9dc3b0-54ea-4579-85bd-ff2459eb765a)
 
     - Make an API Call
+      ![API-Call](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/8c4338f8-3d25-44d2-90ed-ab559b5dbb1b)
 
     - after API Call, Database look like:
+      ![Final-DataBase](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/ae163dfe-426f-41e9-9d6b-7ecf35ae408b)
 
 - User Addidtion to the list having list id is listId
     - Make an API Call
+      ![API-Call-made](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/b584829f-daeb-4138-9277-dc33e5d5cced)
 
     - after API Call, Database look like:
+      ![After-Api-Call-has-been-made](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/294e5324-cb19-4f0c-ace8-5b6d4279cb8d)
 
 - Send an email to the complete list having list id = listId.
     - make an Api Call
+      ![Make-an-API-Call](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/deac282e-55d1-41ba-b517-e010b578e959)
 
     - RabbitMQ Analysis
+      ![RabbitMQ-Analysis](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/b3528fb8-58e8-4776-ab24-0eb513aac10b)
 
     - Prove that we have received the mail
+      ![Prove](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/fafb531d-4c4d-4760-8f95-4399bf018f56)
 
 - Unsubscribe the user from the list
     - Database before making an API Call
+      ![Database-before-making-an-API-Call](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/46736e0c-0830-42a6-b87e-2360c49fbbe8)
 
     - make an API Call
+      ![Make-an-API-Call](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/e2feb03d-115d-4f8c-8a28-d89eb28a90de)
 
     - Database after making an API Call
+      ![Database-after-making-an-API-Call](https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API/assets/97300337/db33de05-0ca5-4334-9e52-b6efa60fad29)
