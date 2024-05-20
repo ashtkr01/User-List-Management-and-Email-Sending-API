@@ -4,7 +4,7 @@
 I have completed this interesting assignmend given by MathonGo. Worked well on each required statement of the assignment.
 
 - Implemented a RESTful API for managing a user list with customizable properties, allowing the admin to create lists with titles and custom properties, including default values.
-- Developed a RESTful API enabling admins to add users via CSV upload, efficiently handling over 10,000 records.
+- Developed a RESTful API enabling admins to add users via CSV upload to the list, efficiently handling over 10,000 records.
    - Additionally, we ensure email uniqueness and provide fallback values for unspecified custom properties.    
     - In case of user addition errors, we furnish a detailed CSV report containing the list, error messages, and counts of successful and failed additions, ensuring clarity and ease of troubleshooting.
 - RESTful API empowers administrators to send personalized emails to the entire list effortlessly. Custom properties serve as placeholders in the email body, allowing dynamic content replacement upon sending, ensuring tailored communication.
