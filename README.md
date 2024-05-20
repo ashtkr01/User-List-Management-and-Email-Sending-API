@@ -54,7 +54,7 @@ I have completed this interesting assignmend given by MathonGo. Worked well on e
   PORT
   MONGODB_URI
   EMAIL_USER
-  EMAIL_PASS
+  EMAIL_PASS  // stores the application-specific password (app password) for the email account specified in EMAIL_USER.
 ```
 - Build and run the project
 ```bash
