@@ -46,7 +46,7 @@ I have completed this interesting assignmend given by MathonGo. Worked well on e
 ```bash
   mkdir public
 ```
-- Then, create the uploads directory inside the public directory
+- Then, create the upload directory inside the public directory
 ```bash
   mkdir public/upload
 ```
