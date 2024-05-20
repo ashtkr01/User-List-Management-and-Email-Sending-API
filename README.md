@@ -42,6 +42,15 @@ I have completed this interesting assignmend given by MathonGo. Worked well on e
   git clone https://github.com/ashtkr01/User-List-Management-and-Email-Sending-API.git
 ```
 - Open the repository folder in any code editor (VS code) or open any terminal.
+- Run the following command to create the public directory:
+```bash
+  mkdir public
+```
+- Then, create the uploads directory inside the public directory
+```bash
+  mkdir public/uploads
+```
+- Purpose : The public/uploads directory will be used to temporarily store CSV files that are uploaded. This ensures that the files are organized and easily accessible for further processing.
 - Install dependencies
 
 ```bash
@@ -51,10 +60,10 @@ I have completed this interesting assignmend given by MathonGo. Worked well on e
     - To run this project, firstly you will need to create the file i.e .env file in repository folder and then add the following environment variables to your .env file
 
 ```bash
-  PORT
-  MONGODB_URI
-  EMAIL_USER
-  EMAIL_PASS  // stores the application-specific password (app password) for the email account specified in EMAIL_USER.
+  PORT=<port_number>
+  MONGODB_URI=<MongoDB_URI> //Connection string for connecting to the MongoDB database.
+  EMAIL_USER=<email_id>
+  EMAIL_PASS=<password> // stores the application-specific password (app password) for the email account specified in EMAIL_USER.
 ```
 - Build and run the project
 ```bash
