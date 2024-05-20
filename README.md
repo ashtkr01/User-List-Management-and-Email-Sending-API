@@ -48,9 +48,9 @@ I have completed this interesting assignmend given by MathonGo. Worked well on e
 ```
 - Then, create the uploads directory inside the public directory
 ```bash
-  mkdir public/uploads
+  mkdir public/upload
 ```
-- Purpose : The public/uploads directory will be used to temporarily store CSV files that are uploaded. This ensures that the files are organized and easily accessible for further processing.
+- Purpose : The public/upload directory will be used to temporarily store CSV files that are uploaded. This ensures that the files are organized and easily accessible for further processing.
 - Install dependencies
 
 ```bash
